@@ -1,0 +1,156 @@
+.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 60%;
+    margin: 50px auto;
+    padding: 0px;
+}
+
+.column-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+}
+
+.column-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Kontener na karty - widoczne max 5 */
+.cards-container {
+    max-height: calc(5 * 170px);
+    /* 5 kart po 170px */
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* Scrollbar */
+.cards-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+    background: #00c8ff;
+    border-radius: 8px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+/* Karty */
+.card {
+    background: #222;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+    height: 160px;
+    /* stała wysokość */
+    overflow: hidden;
+}
+
+.card:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.card-top img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 4px;
+}
+
+.card-top h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #00c8ff;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* max 3 linie */
+    -webkit-box-orient: vertical;
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+    .three-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .column-title {
+        font-size: 1.3rem;
+    }
+}
+
+.column-footer-button {
+    display: block;
+    text-align: center;
+    background-color: #4CAF50;
+    /* zielony */
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.column-footer-button:hover {
+    background-color: #45a049;
+    /* ciemniejszy zielony przy hover */
+}
+
+.read-more-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#read-more-btn:hover {
+    background-color: #0056b3;
+}
