@@ -9,7 +9,7 @@
     margin-bottom: 30px;
 }
 
-.vpn-header h2 {
+.vpn-header h1 {
     font-size: 2em;
     margin-bottom: 10px;
     color: #007BFF;
@@ -30,10 +30,18 @@
 
 .vpn-item {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* wysokość dopasowana do lewej sekcji */
+    justify-content: space-between;
     border-bottom: 1px solid #ccc;
     padding: 30px 0;
     margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.vpn-item:hover {
+    background-color: #e6f2ff;
 }
 
 .vpn-logo {
@@ -45,6 +53,7 @@
 .vpn-logo img {
     width: 80px;
     height: auto;
+    border-radius: 10px;
 }
 
 .vpn-info {
@@ -56,29 +65,40 @@
 
 .vpn-info h3 {
     margin: 0 0 5px;
+    color: #007BFF; /* kolor nazwy VPN */
+    font-size: 1.4em;
+}
+
+.vpn-info strong {
+    color: #FF5733; /* kolor nagłówka "Dlaczego warto?" */
+    font-size: 1.1em;
 }
 
 .vpn-info p {
-    margin: 0;
+    margin: 5px 0;
     color: #555;
+    line-height: 1.6; /* lepsza czytelność tekstu */
 }
 
 .vpn-actions {
-    flex: 0 0 120px;
+    flex: 0 0 200px; /* szerokość prawej kolumny */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* przycisk i ocena jeden pod drugim */
+    align-items: center;    /* wyśrodkowanie poziome */
+    justify-content: center; /* wyśrodkowanie pionowe względem całego bloku */
     gap: 10px;
-    padding-left: 20px;
 }
 
 .vpn-actions button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .vpn-actions button:hover {
@@ -88,4 +108,30 @@
 .rating {
     font-weight: bold;
     color: #FFA500;
+}
+
+/* Responsywność */
+@media screen and (max-width: 900px) {
+    .vpn-section {
+        width: 90%;
+    }
+
+    .vpn-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vpn-info {
+        border: none;
+        padding: 15px 0;
+    }
+
+    .vpn-actions {
+        flex: 1;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 0;
+        margin-top: 15px;
+    }
 }
