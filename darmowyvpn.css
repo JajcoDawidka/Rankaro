@@ -1,0 +1,104 @@
+.vpn-free-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  padding-bottom: 100px;
+}
+
+.vpn-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.vpn-header h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #007BFF;
+}
+
+.vpn-header p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Bloczek powodów */
+.vpn-reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.reason-box {
+  flex: 1 1 calc(50% - 20px);
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.reason-box:hover {
+  background: #e6f2ff;
+  transform: translateY(-3px);
+}
+
+.reason-box h3 {
+  color: #007BFF;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.reason-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CTA sekcja */
+.vpn-cta {
+  text-align: center;
+  background: #f0f7ff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.vpn-cta h2 {
+  color: #007BFF;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.vpn-cta p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.vpn-btn-big {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #007BFF;
+  color: #fff !important;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.vpn-btn-big:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsywność */
+@media screen and (max-width: 768px) {
+  .reason-box {
+    flex: 1 1 100%;
+  }
+}

@@ -53,6 +53,7 @@ body {
 }
 
 header {
+    position: relative;
     background-color: #F9FAFB;
     color: black;
     padding: 15px 30px;
@@ -72,15 +73,28 @@ header {
     gap: 10px;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; /* usuwa podkreślenie */
+    color: inherit;        /* bierze kolor z rodzica */
+}
+
 .logo img {
     width: 40px;
     height: 40px;
 }
 
 nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 25px;
+    align-items: center;
 }
+
 
 .nav-item {
     display: flex;
@@ -93,7 +107,7 @@ nav {
 .nav-item a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
@@ -118,13 +132,10 @@ nav {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    /* równe odstępy między kolumnami */
     align-items: flex-start;
-    /* wyrównanie do góry */
-    max-width: 1200px;
+    max-width: 60%;
     margin: 0 auto;
     flex-wrap: wrap;
-    /* responsywność */
 }
 
 /* ---- LEWA KOLUMNA ---- */
