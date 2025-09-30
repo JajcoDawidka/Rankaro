@@ -1,25 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slider-track img');
-
-    let index = 0;
-    const visibleSlides = 4;
-    const totalSlides = slides.length;
-
-    function moveSlider() {
-        index++;
-
-        if (index > totalSlides - visibleSlides) {
-            index = 0;
-        }
-
-        track.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
-    }
-
-    setInterval(moveSlider, 5000);
-});
-
-// FAQ accordion
 const initFAQ = () => {
   document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.question');
@@ -45,3 +23,38 @@ const initFAQ = () => {
   });
 };
 initFAQ();
+
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  
+  const cardWidth = track.querySelector('.card').offsetWidth + 20; // szerokość + gap
+  let position = 0;
+
+  function updateButtons() {
+    prevBtn.disabled = position === 0;
+    const maxScroll = track.scrollWidth - carousel.querySelector('.carousel-track-wrapper').offsetWidth;
+    nextBtn.disabled = Math.abs(position) >= maxScroll;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (position < 0) {
+      position += cardWidth;
+      track.style.transform = `translateX(${position}px)`;
+      updateButtons();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const maxScroll = track.scrollWidth - carousel.querySelector('.carousel-track-wrapper').offsetWidth;
+    if (Math.abs(position) < maxScroll) {
+      position -= cardWidth;
+      track.style.transform = `translateX(${position}px)`;
+      updateButtons();
+    }
+  });
+
+  updateButtons(); // start
+});
+
