@@ -1,0 +1,51 @@
+/* Sekcja Kontakt */
+.contact-container {
+  width: 70%;
+  margin: 60px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007BFF; /* spójny kolor nagłówków */
+}
+
+.contact-container p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  width: 100%;
+}
+
+.form-wrapper iframe {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Responsywność */
+@media screen and (max-width: 900px) {
+  .contact-container {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .contact-container h1 {
+    font-size: 1.6em;
+  }
+
+  .contact-container p {
+    font-size: 1em;
+  }
+
+  .form-wrapper iframe {
+    height: 900px;
+  }
+}

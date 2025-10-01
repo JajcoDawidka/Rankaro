@@ -232,28 +232,6 @@ nav {
     background-color: #E5E7EB;
 }
 
-/* ---- RESPONSYWNOŚĆ ---- */
-@media (max-width: 900px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-left,
-    .footer-center,
-    .footer-right {
-        margin-top: 20px;
-    }
-
-    .footer-center .center-content,
-    .footer-right p {
-        text-align: left;
-    }
-
-    .footer-center h3 {
-        text-align: left;
-    }
-}
 
 .small-container {
     width: 60%;

@@ -1,0 +1,80 @@
+.intro-section, .seo-section, .faq-section, .cta-section {
+  width: 70%;
+  margin: 60px auto;
+  font-family: Arial, sans-serif;
+}
+
+.intro-header h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #007BFF;
+  text-align: center;
+}
+
+.intro-header p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seo-section h2, .faq-section h2, .cta-section h2 {
+  font-size: 1.8em;
+  color: #007BFF;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.seo-section p, .faq-section p, .cta-section p {
+  font-size: 1.05em;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.faq-section .faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-section .faq-item h3 {
+  font-size: 1.2em;
+  color: #007BFF;
+  margin-bottom: 8px;
+}
+
+.faq-section .faq-item p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-section .intro-btn {
+  padding: 12px 25px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-section .intro-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsywność */
+@media screen and (max-width: 900px) {
+  .intro-section, .seo-section, .faq-section, .cta-section {
+    width: 90%;
+  }
+}

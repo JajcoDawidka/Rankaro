@@ -1,0 +1,65 @@
+.faq-section {
+    padding-bottom: 100px
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #007BFF; /* spójne z nagłówkami VPN */
+}
+
+.faq {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    background-color: #fff; /* biała „karta” jak vpn-item */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.question {
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #007BFF; /* spójny kolor tytułów */
+}
+
+.icon {
+    font-size: 24px;
+    color: #FF5733; /* kontrastowy akcent jak w vpn-info strong */
+    transition: transform 0.3s;
+}
+
+.faq-item.open .icon {
+    transform: rotate(45deg); /* animacja przy otwieraniu */
+}
+
+.answer {
+    font-size: 18px;
+    color: #555; /* taki sam jak opis VPN */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    line-height: 1.6;
+}
+
+.faq-item.open .answer {
+    max-height: 1000px; /* duża wysokość, by zmieścić tekst */
+    padding: 10px 20px 15px;
+}
