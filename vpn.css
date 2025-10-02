@@ -111,32 +111,6 @@
     color: #555;
 }
 
-/* Responsywność */
-@media screen and (max-width: 900px) {
-    .vpn-section {
-        width: 90%;
-    }
-
-    .vpn-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .vpn-info {
-        border: none;
-        padding: 15px 0;
-    }
-
-    .vpn-actions {
-        flex: 1;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 0;
-        margin-top: 15px;
-    }
-}
-
 .stars {
     background: linear-gradient(90deg, #FFD700, #FFA500);
     -webkit-background-clip: text;
