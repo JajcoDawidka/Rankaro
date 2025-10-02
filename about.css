@@ -1,4 +1,4 @@
-.intro-section, .seo-section, .faq-section, .cta-section {
+.intro-section, .seo-section, .cta-section {
   width: 70%;
   margin: 60px auto;
   font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
   margin-bottom: 30px;
 }
 
-.seo-section h2, .faq-section h2, .cta-section h2 {
+.seo-section h2, .cta-section h2 {
   font-size: 1.8em;
   color: #007BFF;
   margin-bottom: 15px;
@@ -32,22 +32,6 @@
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify;
-}
-
-.faq-section .faq-item {
-  margin-bottom: 20px;
-}
-
-.faq-section .faq-item h3 {
-  font-size: 1.2em;
-  color: #007BFF;
-  margin-bottom: 8px;
-}
-
-.faq-section .faq-item p {
-  font-size: 1em;
-  color: #555;
-  line-height: 1.5;
 }
 
 .cta-section {
@@ -70,11 +54,4 @@
 
 .cta-section .intro-btn:hover {
   background-color: #0056b3;
-}
-
-/* Responsywność */
-@media screen and (max-width: 900px) {
-  .intro-section, .seo-section, .faq-section, .cta-section {
-    width: 90%;
-  }
 }

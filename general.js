@@ -32,4 +32,27 @@ document.querySelectorAll('.carousel').forEach(carousel => {
   updateButtons(); // start
 });
 
+    const menuToggle = document.getElementById('mobile-menu');
+    const menuClose = document.getElementById('menu-close');
+    const nav = document.querySelector('nav');
+
+    // Otwórz menu
+    menuToggle.addEventListener('click', () => {
+        nav.classList.add('active');
+    });
+
+    // Zamknij menu przyciskem X
+    menuClose.addEventListener('click', () => {
+        nav.classList.remove('active');
+    });
+
+    // Zamknij menu klikając poza nim
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            nav.classList.remove('active');
+        }
+    });
+
+
+
 

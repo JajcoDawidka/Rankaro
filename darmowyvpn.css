@@ -95,10 +95,3 @@
   background: #0056b3;
   transform: translateY(-3px);
 }
-
-/* Responsywność */
-@media screen and (max-width: 768px) {
-  .reason-box {
-    flex: 1 1 100%;
-  }
-}

@@ -39,13 +39,6 @@
     text-align: justify;
 }
 
-/* Responsywność */
-@media screen and (max-width: 900px) {
-    .intro-section, .content-section, .seo-section {
-        width: 90%;
-    }
-}
-
 .carousel {
   position: relative;
   margin-bottom: 60px;
@@ -135,26 +128,6 @@
 
 .carousel-btn.next {
   margin-left: 30px;
-}
-
-/* Responsywność */
-@media screen and (max-width: 900px) {
-  .content-section {
-    width: 90%;
-  }
-
-  .card {
-    min-width: 200px;
-    height: 180px;
-  }
-
-  .carousel-btn.prev {
-    margin-right: 15px;
-  }
-
-  .carousel-btn.next {
-    margin-left: 15px;
-  }
 }
 
 .seo-section.enhanced {

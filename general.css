@@ -18,7 +18,8 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center; /* wyśrodkowanie wszystkiego */
+    justify-content: center;
+    /* wyśrodkowanie wszystkiego */
     box-sizing: border-box;
 }
 
@@ -26,13 +27,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* odstępy między elementami */
+    gap: 20px;
+    /* odstępy między elementami */
 }
 
 .text {
     display: flex;
     align-items: center;
-    gap: 10px; /* odstęp między h2 i p */
+    gap: 10px;
+    /* odstęp między h2 i p */
 }
 
 .banner-btn {
@@ -77,8 +80,10 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    text-decoration: none; /* usuwa podkreślenie */
-    color: inherit;        /* bierze kolor z rodzica */
+    text-decoration: none;
+    /* usuwa podkreślenie */
+    color: inherit;
+    /* bierze kolor z rodzica */
 }
 
 .logo img {
@@ -212,7 +217,6 @@ nav {
     text-decoration: underline;
 }
 
-/* ---- PRAWA KOLUMNA ---- */
 .footer-right {
     flex: 1;
     min-width: 250px;
@@ -237,6 +241,7 @@ nav {
     width: 60%;
     margin: 20px auto;
     padding: 20px;
+    margin-bottom: 50px;
     border-radius: 10px;
     background: linear-gradient(270deg, #4b0082, #000);
     background-size: 400% 400%;
@@ -278,4 +283,92 @@ nav {
     100% {
         background-position: 0% 50%;
     }
+}
+
+@media (max-width: 768px) {
+    .small-container {
+        width: 90%;
+        /* kontener prawie pełnej szerokości */
+        padding: 15px;
+        /* zmniejszamy padding, żeby nie było ciasno */
+        margin-bottom: 30px;
+        /* lekko mniejszy odstęp */
+    }
+
+    .content {
+        flex-direction: column;
+        /* elementy jeden pod drugim */
+        align-items: stretch;
+        /* rozciągamy na całą szerokość */
+        gap: 15px;
+        /* odstęp między elementami */
+    }
+
+    .check-offer {
+        width: 100%;
+        /* przycisk na całą szerokość kontenera */
+        text-align: center;
+        /* tekst na środku */
+        padding: 12px 0;
+        /* trochę więcej miejsca w pionie */
+        font-size: 1rem;
+        /* dopasowanie tekstu do małego ekranu */
+    }
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-close {
+    position: absolute;
+    display: none;
+    align-self: flex-end;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menu-close {
+    display: block;
+    /* pokaż tylko w mobilnej wersji */
+}
+
+.menu-toggle {
+    display: block;
+}
+
+nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    background-color: #F9FAFB;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+nav.active {
+    display: flex;
+}
+
+.nav-item {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-item:last-child {
+    border-bottom: none;
 }
